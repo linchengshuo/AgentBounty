@@ -1,6 +1,8 @@
 import { Address, zeroAddress } from "viem";
 
-export const agentBountyAddress = (process.env.NEXT_PUBLIC_AGENT_BOUNTY_ADDRESS || zeroAddress) as Address;
+const configuredAgentBountyAddress = process.env.NEXT_PUBLIC_AGENT_BOUNTY_ADDRESS || process.env.NEXT_PUBLIC_CONTRACT_ADDRESS; // 优先读取项目专用变量，也兼容 README 和 Vercel 里使用的通用合约地址变量。
+
+export const agentBountyAddress = (configuredAgentBountyAddress || zeroAddress) as Address;
 
 export const isContractConfigured = agentBountyAddress !== zeroAddress;
 

@@ -280,7 +280,7 @@ export default function CreateTaskPage() {
               </div>
               {!isContractConfigured ? (
                 <p className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-800">
-                  Contract address is not configured. Deploy the contract and set NEXT_PUBLIC_AGENT_BOUNTY_ADDRESS.
+                  Contract address is not configured. Deploy the contract and set NEXT_PUBLIC_AGENT_BOUNTY_ADDRESS or NEXT_PUBLIC_CONTRACT_ADDRESS.
                 </p>
               ) : null}
               {isSuccess ? (
