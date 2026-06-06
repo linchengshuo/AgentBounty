@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f6f8f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background:
+    linear-gradient(180deg, rgba(246, 248, 245, 0.96), rgba(255, 255, 255, 0.98)),
+    #f6f8f5;
+  color: #101412;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: #c7f6d9;
+  color: #101412;
+}
+
+.focus-ring {
+  @apply outline-none ring-2 ring-transparent transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] focus:ring-ritual/35;
+}
+
+.shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.double-bezel {
+  @apply rounded-[1.25rem] border border-white/80 bg-white/55 p-1.5 shadow-soft ring-1 ring-black/[0.04];
+}
+
+.double-bezel-inner {
+  @apply rounded-[calc(1.25rem-0.375rem)] border border-line bg-white shadow-inset;
+}
